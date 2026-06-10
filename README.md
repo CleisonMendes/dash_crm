@@ -1,73 +1,50 @@
-# Welcome to your Lovable project
+​Guia de Desenvolvimento e Gerenciamento
+​Este documento descreve as formas de editar, desenvolver e implantar o seu projeto.
+​Como editar o código
+​Existem quatro formas principais de realizar alterações na sua aplicação:
+​1. Através da plataforma Lovable
+​A maneira mais direta é acessar o painel do seu projeto no Lovable e enviar suas sugestões ou comandos diretamente pela interface. Todas as alterações feitas por lá são sincronizadas automaticamente com o repositório.
+​2. Usando sua IDE local
+​Se você prefere trabalhar localmente, pode clonar o repositório e utilizar seu editor de código favorito (como VS Code). Certifique-se de ter o Node.js e o npm instalados (recomendamos o uso do nvm para gerenciar as versões).
+​Passos para configuração local:
+# 1. Clone o repositório
+git clone <URL_DO_SEU_GIT>
 
-## Project info
+# 2. Entre na pasta do projeto
+cd <NOME_DO_SEU_PROJETO>
 
-**URL**: https://lovable.dev/projects/9b04b6e9-8216-40d1-9d73-aa692393d385
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/9b04b6e9-8216-40d1-9d73-aa692393d385) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
+# 3. Instale as dependências
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 4. Inicie o servidor de desenvolvimento
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9b04b6e9-8216-40d1-9d73-aa692393d385) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+3. Editando diretamente no GitHub
+​Para alterações rápidas de arquivos específicos:
+​Navegue até o arquivo desejado no repositório.
+​Clique no ícone de lápis ("Editar") no canto superior direito.
+​Faça as alterações necessárias e confirme o commit.
+​4. Usando o GitHub Codespaces
+​Para um ambiente de desenvolvimento na nuvem, sem precisar configurar nada localmente:
+​Na página principal do repositório, clique no botão verde "Código".
+​Selecione a aba "Codespaces".
+​Clique em "Novo espaço de código".
+​Edite, confirme e envie (push) suas alterações diretamente no navegador.
+​Tecnologias utilizadas
+​Este projeto foi desenvolvido com uma base moderna e eficiente:
+​Vite: Ferramenta de construção e servidor de desenvolvimento ultra rápido.
+​TypeScript: Garantia de tipagem estática e maior segurança no código.
+​React: Biblioteca para construção de interfaces dinâmicas e reativas.
+​shadcn/ui: Componentes de interface reutilizáveis e acessíveis.
+​Tailwind CSS: Framework de utilitários CSS para estilização rápida e responsiva.
+​Como implantar o projeto
+​O processo de deploy é simplificado através da própria plataforma:
+​Abra o seu projeto no Lovable.
+​Vá até a opção Compartilhar.
+​Clique em Publicar.
+​Domínios personalizados
+​É possível conectar um domínio próprio ao seu projeto para deixá-lo com uma identidade profissional.
+​No Lovable, acesse Projeto > Configurações > Domínios.
+​Clique em Conectar Domínio.
+​Siga as instruções fornecidas na tela para configurar o DNS.
