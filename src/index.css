@@ -1,0 +1,247 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Burgundy/Wine primary colors */
+    --burgundy-primary: 16 4 10; /* #4A0C1D */
+    --burgundy-secondary: 20 8 14; /* Lighter burgundy */
+    --burgundy-accent: 12 2 6; /* Darker burgundy */
+    
+    /* Gold accent colors */
+    --gold-primary: 45 64 54; /* #C9A14A */
+    --gold-secondary: 42 58 48; /* Darker gold */
+    --gold-accent: 48 70 60; /* Lighter gold */
+    
+    /* Wine theme colors */
+    --wine-dark: 358 82 13; /* #36040a - fundo vinho escuro */
+    --wine-sidebar: 348 65 26; /* #6b1a27 - barra lateral vinho */
+    --wine-beige: 38 67 88; /* #f5e2c8 - textos em bege claro */
+    --wine-gold: 33 51 61; /* #d49f61 - acentos dourados */
+    --wine-brown: 25 56 46; /* #b66d34 - elementos secundários marrom */
+    --wine-gold-light: 45 64 54; /* dourado claro para cartões */
+    --wine-blue-light: 180 55 84; /* #8ededf - azul claro */
+    --wine-orange-light: 36 89 74; /* #f8c37f - laranja claro */
+    --wine-yellow: 52 100 81; /* #ffe29e - amarelo */
+    
+    /* Background colors */
+    --background: 0 0 0; /* Black background */
+    --foreground: 0 0 98; /* White text */
+    --card: 16 4 10; /* Burgundy card background */
+    --card-foreground: 0 0 98; /* White card text */
+    --popover: 16 4 10; /* Burgundy popover */
+    --popover-foreground: 0 0 98; /* White popover text */
+    
+    /* Primary colors using burgundy */
+    --primary: 16 4 10; /* Burgundy primary */
+    --primary-foreground: 0 0 98; /* White on burgundy */
+    
+    /* Secondary colors using gold */
+    --secondary: 45 64 54; /* Gold secondary */
+    --secondary-foreground: 16 4 10; /* Burgundy on gold */
+    
+    /* Muted colors */
+    --muted: 20 8 14; /* Muted burgundy */
+    --muted-foreground: 0 0 70; /* Muted white */
+    
+    /* Accent colors using gold */
+    --accent: 45 64 54; /* Gold accent */
+    --accent-foreground: 16 4 10; /* Burgundy on gold */
+    
+    /* Destructive colors */
+    --destructive: 0 84 60; /* Red */
+    --destructive-foreground: 0 0 98; /* White */
+    
+    /* Success colors */
+    --success: 142 76 36; /* Green */
+    --success-foreground: 0 0 98; /* White */
+    
+    /* Warning colors */
+    --warning: 48 96 53; /* Yellow */
+    --warning-foreground: 16 4 10; /* Burgundy */
+    
+    /* Border and input colors */
+    --border: 20 8 14; /* Burgundy border */
+    --input: 20 8 14; /* Burgundy input */
+    --ring: 45 64 54; /* Gold ring */
+    
+    /* Sidebar colors */
+    --sidebar-background: 16 4 10; /* Burgundy sidebar */
+    --sidebar-foreground: 0 0 98; /* White sidebar text */
+    --sidebar-primary: 45 64 54; /* Gold sidebar primary */
+    --sidebar-primary-foreground: 16 4 10; /* Burgundy on gold */
+    --sidebar-accent: 20 8 14; /* Accent burgundy */
+    --sidebar-accent-foreground: 0 0 98; /* White on accent */
+    --sidebar-border: 20 8 14; /* Burgundy border */
+    --sidebar-ring: 45 64 54; /* Gold ring */
+    
+    /* Chart colors */
+    --chart-1: 45 64 54; /* Gold */
+    --chart-2: 142 76 36; /* Green */
+    --chart-3: 271 81 56; /* Purple */
+    --chart-4: 210 40 98; /* Blue */
+    --chart-5: 0 84 60; /* Red */
+    
+    --radius: 0.5rem;
+  }
+
+  .light {
+    /* Light theme overrides */
+    --background: 0 0 100; /* White background */
+    --foreground: 16 4 10; /* Burgundy text */
+    --card: 0 0 100; /* White card background */
+    --card-foreground: 16 4 10; /* Burgundy card text */
+    --popover: 0 0 100; /* White popover */
+    --popover-foreground: 16 4 10; /* Burgundy popover text */
+    
+    --primary: 16 4 10; /* Burgundy primary */
+    --primary-foreground: 0 0 98; /* White on burgundy */
+    
+    --secondary: 0 0 96; /* Light gray secondary */
+    --secondary-foreground: 16 4 10; /* Burgundy on light gray */
+    
+    --muted: 0 0 96; /* Light gray muted */
+    --muted-foreground: 0 0 45; /* Dark gray text */
+    
+    --accent: 45 64 54; /* Gold accent */
+    --accent-foreground: 0 0 98; /* White on gold */
+    
+    --border: 0 0 89; /* Light gray border */
+    --input: 0 0 89; /* Light gray input */
+    --ring: 45 64 54; /* Gold ring */
+    
+    /* Sidebar stays burgundy in light mode */
+    --sidebar-background: 16 4 10; /* Burgundy sidebar */
+    --sidebar-foreground: 0 0 98; /* White sidebar text */
+    --sidebar-primary: 45 64 54; /* Gold sidebar primary */
+    --sidebar-primary-foreground: 16 4 10; /* Burgundy on gold */
+    --sidebar-accent: 20 8 14; /* Accent burgundy */
+    --sidebar-accent-foreground: 0 0 98; /* White on accent */
+    --sidebar-border: 20 8 14; /* Burgundy border */
+    --sidebar-ring: 45 64 54; /* Gold ring */
+  }
+
+  .wine {
+    /* Wine theme */
+    --background: 358 82 13; /* Wine dark background */
+    --foreground: 38 67 88; /* Beige text */
+    --card: 348 65 26; /* Wine sidebar for cards */
+    --card-foreground: 38 67 88; /* Beige card text */
+    --popover: 348 65 26; /* Wine popover */
+    --popover-foreground: 38 67 88; /* Beige popover text */
+    
+    /* Primary colors using wine gold */
+    --primary: 33 51 61; /* Wine gold primary */
+    --primary-foreground: 358 82 13; /* Wine dark on gold */
+    
+    /* Secondary colors using wine brown */
+    --secondary: 25 56 46; /* Wine brown secondary */
+    --secondary-foreground: 38 67 88; /* Beige on brown */
+    
+    /* Muted colors */
+    --muted: 348 65 26; /* Wine sidebar for muted */
+    --muted-foreground: 38 67 78; /* Slightly darker beige */
+    
+    /* Accent colors using wine gold */
+    --accent: 33 51 61; /* Wine gold accent */
+    --accent-foreground: 358 82 13; /* Wine dark on gold */
+    
+    /* Destructive colors */
+    --destructive: 0 84 60; /* Red */
+    --destructive-foreground: 38 67 88; /* Beige */
+    
+    /* Success colors using wine blue light */
+    --success: 180 55 84; /* Wine blue light */
+    --success-foreground: 358 82 13; /* Wine dark */
+    
+    /* Warning colors using wine yellow */
+    --warning: 52 100 81; /* Wine yellow */
+    --warning-foreground: 358 82 13; /* Wine dark */
+    
+    /* Border and input colors */
+    --border: 25 56 46; /* Wine brown border */
+    --input: 25 56 46; /* Wine brown input */
+    --ring: 33 51 61; /* Wine gold ring */
+    
+    /* Sidebar colors */
+    --sidebar-background: 348 65 26; /* Wine sidebar */
+    --sidebar-foreground: 38 67 88; /* Beige sidebar text */
+    --sidebar-primary: 33 51 61; /* Wine gold sidebar primary */
+    --sidebar-primary-foreground: 358 82 13; /* Wine dark on gold */
+    --sidebar-accent: 25 56 46; /* Wine brown accent */
+    --sidebar-accent-foreground: 38 67 88; /* Beige on accent */
+    --sidebar-border: 25 56 46; /* Wine brown border */
+    --sidebar-ring: 33 51 61; /* Wine gold ring */
+    
+    /* Chart colors using wine theme palette */
+    --chart-1: 33 51 61; /* Wine gold */
+    --chart-2: 180 55 84; /* Wine blue light */
+    --chart-3: 36 89 74; /* Wine orange light */
+    --chart-4: 52 100 81; /* Wine yellow */
+    --chart-5: 25 56 46; /* Wine brown */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .financial-card {
+    @apply bg-card border border-border rounded-lg shadow-sm;
+  }
+  
+  .financial-card-header {
+    @apply px-6 py-4 border-b border-border flex items-center justify-between;
+  }
+  
+  .financial-label {
+    @apply text-sm text-muted-foreground;
+  }
+  
+  .financial-value {
+    @apply text-3xl font-bold text-gold-primary p-6;
+  }
+  
+  .data-table {
+    @apply w-full border-collapse;
+  }
+  
+  .data-table th {
+    @apply px-4 py-3 text-left text-sm font-medium text-muted-foreground border-b border-border;
+  }
+  
+  .data-table td {
+    @apply px-4 py-3 text-sm border-b border-border;
+  }
+  
+  .sidebar-nav-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-md text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-colors;
+  }
+  
+  .sidebar-nav-item.active {
+    @apply bg-sidebar-primary text-sidebar-primary-foreground font-medium;
+  }
+  
+  .metric-card {
+    @apply bg-card p-6 rounded-lg border border-border;
+  }
+  
+  .metric-value {
+    @apply text-2xl font-bold text-gold-primary;
+  }
+  
+  .metric-label {
+    @apply text-sm text-muted-foreground;
+  }
+}
